@@ -66,7 +66,7 @@ public class Owner extends Person {
         return this.address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(final String address) {
         this.address = address;
     }
 
