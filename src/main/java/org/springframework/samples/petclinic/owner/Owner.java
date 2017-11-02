@@ -74,7 +74,7 @@ public class Owner extends Person {
         return this.city;
     }
 
-    public void setCity(String city) {
+    public void setCity(final String city) {
         this.city = city;
     }
 
@@ -82,7 +82,7 @@ public class Owner extends Person {
         return this.telephone;
     }
 
-    public void setTelephone(String telephone) {
+    public void setTelephone(final String telephone) {
         this.telephone = telephone;
     }
 
