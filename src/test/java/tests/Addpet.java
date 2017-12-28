@@ -1,16 +1,16 @@
 package tests;
 
-import java.util.regex.Pattern;
+/* import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Select;  */
 
 public class Addpet {
-  private WebDriver driver;
+  /*private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -90,6 +90,6 @@ public class Addpet {
     } finally {
       acceptNextAlert = true;
     }
-  }
+  }  */
 }
 

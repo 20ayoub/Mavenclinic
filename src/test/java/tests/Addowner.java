@@ -1,13 +1,13 @@
-package tests;
+ package tests;
 
-import java.util.concurrent.TimeUnit;
+/*import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;   */
 
 public class Addowner {
-  private WebDriver driver;
+ /* private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -80,5 +80,5 @@ public class Addowner {
     } finally {
       acceptNextAlert = true;
     }
-  }
+  } */
 }
