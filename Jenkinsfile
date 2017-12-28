@@ -16,5 +16,10 @@ pipeline {
                 }
             }
         }
+        stage ('JUnit tests'){
+		steps{
+			bat 'mvn test:test'
+		}
+		}
     }
 }
