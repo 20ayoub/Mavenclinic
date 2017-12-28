@@ -23,7 +23,7 @@ pipeline {
 		}
         stage ('Code Coverage'){
 		steps{
-			bat 'mvn cobertura:cobertura'
+			bat 'mvn clean cobertura:cobertura'
 		}
 		}
     }
