@@ -179,6 +179,15 @@
     </executions>
 </plugin>
 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          ...
+        </configuration>
+      </plugin>
+        
       <!-- Spring Boot Actuator displays build-related information if a git.properties 
         file is present at the classpath -->
       <plugin>
@@ -223,5 +232,19 @@
             <version>2.3</version>
         </plugin>
     </plugins>
+  </reporting>
+    
+   <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          ...
+        </configuration>
+      </plugin>
+    </plugins>
+    ...
   </reporting>
 </project>
