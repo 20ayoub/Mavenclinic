@@ -28,8 +28,7 @@ pipeline {
 		}
          stage('Generate Documentation and site') {
                  steps{
-                        bat 'mvn javadoc:javadoc'
-                        bat 'mvn clean site'
+                        bat 'mvn clean javadoc:javadoc site'
                  }
 }
         stage('Generate Jar') {
