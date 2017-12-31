@@ -38,7 +38,7 @@ pipeline {
 }
             
            
-    }
+    
 
             
              stage('Publish') {
@@ -50,3 +50,4 @@ pipeline {
            
     }
 
+}
