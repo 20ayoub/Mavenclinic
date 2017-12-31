@@ -28,7 +28,7 @@ pipeline {
 		}
          stage('Generate Javadocs') {
                  steps{
-            bat './scripts/generate-javadoc'
+                        bat 'mvn javadoc:javadoc'
                  }
 }
     }
