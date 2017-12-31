@@ -23,7 +23,7 @@ pipeline {
 			}
 		}
         node{
-		stage('Code Coverage){
+		stage('Code Coverage'){
 			bat 'mvn clean cobertura:cobertura'
             step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
 		}
