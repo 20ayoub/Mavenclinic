@@ -11,12 +11,16 @@ pipeline {
     
 
             
-               stage('Publish') {
-                                     steps{
-
-                nexusPublisher nexusInstanceId: 'nexus', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/spring-petclinic-1.5.1.jar']], mavenCoordinate: [artifactId: 'spring-petclinic', groupId: 'org.springframework.samples', packaging: 'jar', version: '1.5.1']]]
-                                           }
-                                  }
+               stage ('Build') {
+            steps {
+            bat 'mvn install'
+            }
+            post {
+                success {
+                    junit 'target/surefire-reports/**/*.xml' 
+                }
+            }
+     }
            
     }
 
