@@ -35,7 +35,7 @@ pipeline {
             
              stage('Analyse statique') {
                  steps{
-                        bat 'mvn checkstyle:checkstyle findbugs:findbugs'
+                        bat 'mvn checkstyle:checkstyle findbugs:findbugs sonar:sonar -Dsonar.host.url=http://localhost:9000/'
                  }
 }
         stage('Generate Jar') {
