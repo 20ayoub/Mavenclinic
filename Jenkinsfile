@@ -36,7 +36,7 @@ pipeline {
              stage('Analyse statique') {
                  steps{
                         bat 'mvn checkstyle:checkstyle findbugs:findbugs sonar:sonar -Dsonar.host.url=http://localhost:9000/'
-                        checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'target/checkstyle-result.xml.', unHealthy: ''
+                        checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '**/checkstyle-result.xml', unHealthy: ''
                  }
 }
         stage('Generate Jar') {
