@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.5.2'
-        jdk 'jdk1.8.0_151'
+        maven 'Maven339'
+        jdk 'JAVA8'
     }
     stages {
         stage ('Build') {
@@ -23,7 +23,7 @@ pipeline {
         stage ('Code Coverage'){
 		steps{
 			bat 'mvn clean cobertura:cobertura'
-            step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+                           step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
 		}
 		}
          stage('Generate Documentation and site') {
@@ -36,6 +36,8 @@ pipeline {
              stage('Analyse statique') {
                  steps{
                         bat 'mvn checkstyle:checkstyle findbugs:findbugs sonar:sonar -Dsonar.host.url=http://localhost:9000/'
+                        checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'target/checkstyle-result.xml.', unHealthy: ''
+²
                  }
 }
         stage('Generate Jar') {
