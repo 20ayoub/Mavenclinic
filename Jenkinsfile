@@ -31,6 +31,13 @@ pipeline {
                         bat 'mvn clean javadoc:javadoc site'
                  }
 }
+            
+            
+             stage('Analyse statique') {
+                 steps{
+                        bat 'mvn checkstyle:checkstyle findbugs:findbugs'
+                 }
+}
         stage('Generate Jar') {
                  steps{
                         bat 'mvn package'
